@@ -1,0 +1,5 @@
+load("/Users/cuizhe/Documents/GitHub/svmATAC/intra-dataset/10xPBMCsV1/output/10xpbmc5k-snap-full_enh0.1_int0.75.rds")
+load("/Users/cuizhe/Documents/GitHub/svmATAC/intra-dataset/10xPBMCsV1/output/10xpbmc5k-snap-full_enh0.2_int0.5.rds")
+load("/Users/cuizhe/Documents/GitHub/svmATAC/intra-dataset/10xPBMCsV1/output/10xpbmc5k-snap-full.rds")
+load("/Users/cuizhe/Documents/GitHub/svmATAC/intra-dataset/10xPBMCsV1/output/10xpbmc5k-snap-full_enh0.3_int0.25.rds")
+load("/Users/cuizhe/Documents/GitHub/svmATAC/intra-dataset/10xPBMCsV1/output/10xpbmc5k-snap-full_enh0.2_int0.75.rds")

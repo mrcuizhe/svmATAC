@@ -1,0 +1,57 @@
+args=commandArgs(T)
+cutOff_enhanced<-as.numeric(args[1])
+cutOff_coaccess<-as.numeric(args[2])
+
+library(Matrix)
+library(parallel)
+corces2016Data<-readRDS(paste0("../output/corces2016-snap-full_enh",cutOff_enhanced,".rds"))
+labels<-read.table("../input/corces2016_barcode_metadata.tsv",header = TRUE,sep = "\t",check.names = FALSE)
+labels<-labels[labels$barcode %in% rownames(corces2016Data),]
+crn<-readRDS("../input/conns_corces2016.rds")
+
+positive_crn<-na.omit(crn[crn$coaccess>=cutOff_coaccess,])
+
+func<-function(label){
+    barcode<-labels[labels$label == label,]$barcode
+    cell_data<-corces2016Data[rownames(corces2016Data) %in% barcode,]
+    nonZeroColumnList_cell<-diff(cell_data@p)/nrow(cell_data)
+    nonZeroColumnList_cell<-t(as.data.frame(nonZeroColumnList_cell))
+    colnames(nonZeroColumnList_cell)<-corces2016Data@Dimnames[[2]]
+    for(i in 1:length(positive_crn$coaccess)){
+        peak1<-positive_crn$Peak1[i]
+        peak2<-as.character(positive_crn$Peak2[i])
+        peak1_split<-strsplit(peak1,split = "_")[[1]]
+        peak1_left<-as.integer(as.integer(peak1_split[2])/5000)*5000+1
+        peak1_right<-as.integer(as.integer(peak1_split[2])/5000)*5000+5000
+        peak1<-paste0(peak1_split[1],":",peak1_left,"-",peak1_right)
+#         print(peak1)
+        peak2_split<-strsplit(peak2,split = "_")[[1]]
+        peak2_left<-as.integer(as.integer(peak2_split[2])/5000)*5000+1
+        peak2_right<-as.integer(as.integer(peak2_split[2])/5000)*5000+5000
+        peak2<-paste0(peak2_split[1],":",peak2_left,"-",peak2_right)
+        if(! peak1 %in% corces2016Data@Dimnames[[2]]){ 
+            next
+        }
+        if(! peak2 %in% corces2016Data@Dimnames[[2]]){ 
+                next
+        }
+        if(nonZeroColumnList_cell[,peak1]>=cutOff_enhanced){
+            cell_data[,peak2] = 1  
+        }
+        if(nonZeroColumnList_cell[,peak2]>=cutOff_enhanced){
+            cell_data[,peak1] = 1  
+        } 
+    }
+    return(cell_data)
+}
+
+cl.cores <- detectCores()
+cl <- makeCluster(cl.cores-1,type = "FORK") 
+results <- parLapply(cl, levels(labels$label),  func)
+integrated_corces2016Data<-do.call('rbind',results)
+stopCluster(cl)
+
+integrated_corces2016Data<-integrated_corces2016Data[order(rownames(integrated_corces2016Data)),]
+saveRDS(integrated_corces2016Data,file =paste0('../output/corces2016-snap-full_enh',cutOff_enhanced,"_int",cutOff_coaccess,'.rds'))
+
+print(paste0('enh ',cutOff_enhanced,' and int ',cutOff_coaccess,' is finished!'))
