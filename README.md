@@ -6,24 +6,24 @@ Enhancement and integration of peak signal enables accurate identification of ce
 This chapter stores the scripts for processing raw data.
 
 - The _**Corces2016**_ dataset (folder **'Corces2016'**)
-	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Corces2016/bin)
-	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Corces2016/input)
-	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Corces2016/output)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Corces2016/bin)
+	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Corces2016/input)
+	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Corces2016/output)
 
 - The _**Buenrostro2018**_ dataset (folder **'Buenrostro2018'**)
-	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Buenrostro2018/bin)
-	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Buenrostro2018/input)
-	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/Buenrostro2018/output)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Buenrostro2018/bin)
+	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Buenrostro2018/input)
+	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/Buenrostro2018/output)
 
 - The _**10xPBMCsV1**_ dataset (folder **'10xPBMCsV1'**)
-	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsV1/bin)
-	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsV1/input)
-	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsV1/output)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsV1/bin)
+	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsV1/input)
+	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsV1/output)
 
 - The _**10xPBMCsNextGem**_ dataset (folder **'10xPBMCsNextGem'**)
-	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsNextGem/bin)
-	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsNextGem/input)
-	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/proprocess/10xPBMCsNextGem/output)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsNextGem/bin)
+	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsNextGem/input)
+	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/preprocess/10xPBMCsNextGem/output)
 	
 ## 10x_assign_label
 
