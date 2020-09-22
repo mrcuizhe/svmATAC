@@ -83,9 +83,11 @@ This chapter stores the scripts for intra-dataset experiments which are describe
 This chapter stores the scripts for inter-dataset experiments which are described in manuscript.
 
 - The _**10xPBMCs-labeled**_ dataset (folder **'10xPBMCs_labeled'**)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_labeled/bin)
 	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_labeled/input)
 	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_labeled/output)
 	
 - The _**10xPBMCs-unlabeled**_ dataset (folder **'10xPBMCs_unlabeled'**)
+	- [bin](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_unlabeled/bin)
 	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_unlabeled/input)
 	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/inter-dataset/10xPBMCs_unlabeled/output)
