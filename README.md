@@ -12,7 +12,7 @@ The pipeline of svmATAC is consist of two steps:
 
 - 1.[Pre-process](#Pre-process):
 	- If you are trying to reproduce the results in svmATAC paper from **raw sequencing data**(Can be found in preprocess/XXX/input folder), you may need this step. 
-	- If you are trying to reproduce the results in svmATAC paper using **our provided data**(Can be found in XXX-dataset/XXX/input folder), or your data are already stored in matrix (peak-cell) and labelled, you may skip this step.
+	- If you are trying to reproduce the results in svmATAC paper using **our provided data**(Can be found in XXX-dataset/XXX/input folder), or your data are already merged to 0-1 matrix (peak-cell) and labelled, you may skip this step.
 
 - 2.[Training-Classification](#Training-Classification):
 	- The training scripts and classification scripts are stored in bin/ folder of each experiment, you can try these scripts and reproduce the results in svmATAC paper through following chapters: 
@@ -26,13 +26,15 @@ The pipeline of svmATAC is consist of two steps:
 		- [inter-dataset experiment](#inter-dataset)
 			- 10xPBMCs-labeled
 			- 10xPBMCs-unlabeled
-	- For each single experiment
+	- For each single experiment:
 		- All the scripts are available in the bin/ folder
 			- All scripts are numbered and users should execute one by one.
 			- The intermediate temporary files are stored in tmp/ folder and you can ignore these files.
 		- All the input data required are available in the input/ folder
 		- All the output data generated are stored in the output/ folder
-		
+
+## Content	
+	
 ### Pre-process
 
 This chapter stores the scripts for processing raw data.
@@ -74,9 +76,9 @@ This chapter stores the scripts for assigning labels to 10x PBMCs v1 and nextGem
 	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/10x_assign_label/scATAC-seq-5k-nextgem/input)
 	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/10x_assign_label/scATAC-seq-5k-nextgem/output)
 
-## Training-Classification
+### Training-Classification
 
-### intra-dataset
+#### intra-dataset
 
 This chapter stores the scripts for intra-dataset experiments which are described in manuscript.
 
@@ -110,7 +112,7 @@ This chapter stores the scripts for intra-dataset experiments which are describe
 	- [input](https://github.com/mrcuizhe/svmATAC/tree/master/intra-dataset/10xPBMCsNextGem_labeled/input)
 	- [output](https://github.com/mrcuizhe/svmATAC/tree/master/intra-dataset/10xPBMCsNextGem_labeled/output)
 	
-### inter-dataset
+#### inter-dataset
 
 This chapter stores the scripts for inter-dataset experiments which are described in manuscript.
 
