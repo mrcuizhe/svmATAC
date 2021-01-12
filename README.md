@@ -5,6 +5,7 @@ Enhancement and integration of peak signal enables accurate identification of ce
 
 - R 3.6
 - Python 3.7
+- Cicero 3.11
 
 ## Quick Start
 
