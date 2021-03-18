@@ -1,5 +1,7 @@
 # svmATAC
-Enhancement and integration of peak signal enables accurate identification of cell type in scATAC-seq
+Enhancement and imputation of peak signal enables accurate identification of cell type in scATAC-seq
+
+svmATAC is fully open source and under MIT license.
 
 ## Dependencies
 
